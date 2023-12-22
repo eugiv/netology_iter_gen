@@ -33,25 +33,6 @@ class FlatIterator:
         return item
 
 
-# flatt = []
-#
-# for sublist in list_of_lists_2:
-#     if not isinstance(sublist, list):
-#         flatt.append(sublist)
-#     else:
-#         for elem in sublist:
-#             if isinstance(elem, list):
-#                 while True:
-#                     elem = [item for lst in elem for item in lst]
-#                     if all(not isinstance(item, list) for item in elem):
-#                         break
-#                 flatt.extend(elem)
-#             else:
-#                 flatt.append(elem)
-#
-# print(flatt)
-
-
 def test_3():
     list_of_lists_2 = [
         [['a'], ['b', 'c']],
