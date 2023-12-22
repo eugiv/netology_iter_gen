@@ -4,7 +4,7 @@ class FlatIterator:
 
     def __iter__(self):
         self.counter = -1
-        self.iter_elem = [elem for item in self.list_of_lists for elem in item]
+        self.iter_elem = [elem for lst in self.list_of_lists for elem in lst]
         self.iter_elem_cnt = len(self.iter_elem)
 
         return self
@@ -14,9 +14,9 @@ class FlatIterator:
         if self.counter >= self.iter_elem_cnt:
             raise StopIteration
 
-        self.item = self.iter_elem[self.counter]
+        item = self.iter_elem[self.counter]
 
-        return self.item
+        return item
 
 
 def test_1():
