@@ -4,8 +4,9 @@ import types
 def flat_generator(list_of_lists: list):
     iter_elem = [elem for lst in list_of_lists for elem in lst]
     iter_elem_cnt = len(iter_elem)
-    for cnt in range(iter_elem_cnt):
-        item = iter_elem[cnt]
+    for item_cnt in range(iter_elem_cnt):
+        item = iter_elem[item_cnt]
+
         yield item
 
 
